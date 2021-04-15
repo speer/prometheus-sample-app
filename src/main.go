@@ -11,7 +11,7 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
   requestCounter.WithLabelValues(r.URL.Path).Inc()
-  fmt.Fprintf(w, "Hi %s!", r.URL.Path[1:])
+  fmt.Fprintf(w, "Hello %s!", r.URL.Path[1:])
 }
 
 var (
